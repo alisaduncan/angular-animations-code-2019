@@ -39,7 +39,6 @@ import { MessagesComponent } from './messages/messages.component';
     MessagesComponent,
     HeroSearchComponent
   ],
-  providers: [ HeroService, MessageService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
