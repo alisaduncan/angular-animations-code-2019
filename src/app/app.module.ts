@@ -16,6 +16,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { MessagesComponent } from './messages/messages.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
