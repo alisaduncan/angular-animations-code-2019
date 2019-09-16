@@ -9,7 +9,7 @@ import { slideOverRouteAnimation } from './animations';
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('routeAnimation', [
-      transition('Dashboard => *, Heroes-Group => Heroes-Stagger', [
+      transition(':increment', [
         useAnimation(slideOverRouteAnimation, {
           params: {
             enter: 'translateX(-100%)',
@@ -17,7 +17,7 @@ import { slideOverRouteAnimation } from './animations';
           }
         })
       ]),
-      transition('* => Dashboard, Heroes-Stagger => Heroes-Group', [
+      transition(':decrement', [
         useAnimation(slideOverRouteAnimation, {
           params: {
             enter: 'translateX(200%)',
@@ -32,6 +32,6 @@ export class AppComponent {
   title = 'Tour of Heroes';
 
   public prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['routeAnimation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.routeAnimation;
   }
 }
