@@ -9,7 +9,7 @@ import { slideOverRouteAnimation } from './animations';
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('routeAnimation', [
-      transition('Dashboard => Heroes', [
+      transition('Dashboard => *, Heroes-Group => Heroes-Stagger', [
         useAnimation(slideOverRouteAnimation, {
           params: {
             enter: 'translateX(-100%)',
@@ -17,7 +17,7 @@ import { slideOverRouteAnimation } from './animations';
           }
         })
       ]),
-      transition('Heroes => Dashboard', [
+      transition('* => Dashboard, Heroes-Stagger => Heroes-Group', [
         useAnimation(slideOverRouteAnimation, {
           params: {
             enter: 'translateX(200%)',
