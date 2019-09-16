@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
-    "deploy": "rimraf docs && ng build --prod --output-path docs --base-href toh-animations && cpy index.html 404.html --cwd=docs --rename",
+    "deploy": "rimraf docs && ng build --prod --output-path docs --base-href /toh-animations/ && cpy index.html 404.html --cwd=docs --rename",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
