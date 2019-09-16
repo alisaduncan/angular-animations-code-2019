@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -9,8 +10,12 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
   animations: [
-    trigger('queryIn', [
-      transition(':enter', [
+    trigger('animateIn', [
+      transition('* => heroes-group', [
+        style({transform: 'translateY(100%)'}),
+        animate('0.5s')
+      ]),
+      transition('* => heroes-stagger', [
         query(':enter', [
           style({opacity: 0, transform: 'translateY(100%)'}),
           stagger('0.5s', [
@@ -23,8 +28,11 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
+  animateState = '';
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService, private route: ActivatedRoute) {
+    this.animateState = route.snapshot.url[0].path;
+   }
 
   ngOnInit() {
     this.getHeroes();
