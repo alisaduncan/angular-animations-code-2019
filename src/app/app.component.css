@@ -31,4 +31,5 @@ nav a.active {
 app-messages {
   position: fixed;
   bottom: 10px;
+  width: 95%;
 }

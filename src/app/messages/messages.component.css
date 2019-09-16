@@ -1,4 +1,9 @@
 /* MessagesComponent's private CSS styles */
+
+.messages {
+  float: right;
+}
+
 h2 {
   color: red;
   font-family: Arial, Helvetica, sans-serif;
