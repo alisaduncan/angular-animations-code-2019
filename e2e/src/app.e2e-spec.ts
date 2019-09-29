@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('toh-base App', () => {
+describe('toh-animations App', () => {
   let page: AppPage;
 
   beforeEach(() => {
