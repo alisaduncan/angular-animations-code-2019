@@ -1,8 +1,9 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroesComponent } from './heroes.component';
 import { HeroService } from '../hero.service';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { of } from 'rxjs';
 
 describe('HeroesComponent', () => {
@@ -19,8 +20,12 @@ describe('HeroesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [NoopAnimationsModule],
       declarations: [ HeroesComponent ],
-      providers: [{provide: HeroService, useValue: mockHerosService}],
+      providers: [
+        {provide: HeroService, useValue: mockHerosService},
+        {provide: ActivatedRoute, useValue: { snapshot: { url: ['test']}}}
+        ],
       schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
