@@ -1,6 +1,6 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroesComponent } from './heroes.component';
 import { HeroService } from '../hero.service';
@@ -18,7 +18,7 @@ describe('HeroesComponent', () => {
     deleteHero: (hero) => {}
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [NoopAnimationsModule],
       declarations: [ HeroesComponent ],
