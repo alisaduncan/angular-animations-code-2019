@@ -31,7 +31,7 @@ import { slideOverRouteAnimation } from './animations';
 export class AppComponent {
   title = 'Tour of Heroes';
 
-  public prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.routeAnimation;
+  public prepareRoute(outlet: RouterOutlet): number {
+    return outlet?.activatedRouteData?.routeAnimation;
   }
 }

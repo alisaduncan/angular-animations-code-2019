@@ -34,7 +34,7 @@ export class HeroesComponent implements OnInit {
     this.animateState = route.snapshot.url[0].path;
    }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getHeroes();
   }
 
@@ -57,7 +57,7 @@ export class HeroesComponent implements OnInit {
     this.heroService.deleteHero(hero).subscribe();
   }
 
-  public animationComplete(event: AnimationEvent) {
+  public animationComplete(event: AnimationEvent): void {
     alert('Animation complete!');
   }
 

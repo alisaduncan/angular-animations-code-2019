@@ -7,8 +7,8 @@ describe('toh-animations App', () => {
     page = new AppPage();
   });
 
-  it('should display title', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Tour of Heroes');
+  it('should display title', async () => {
+    await page.navigateTo();
+    expect(await page.getParagraphText()).toEqual('Tour of Heroes');
   });
 });
