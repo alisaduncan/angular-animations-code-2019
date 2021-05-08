@@ -1,0 +1,7 @@
+<label>Hero name:
+  <input class="test" #heroName />
+</label>
+<!-- (click) passes input value to add() and then clears the input -->
+<button (click)="onHeroAdded(heroName.value); heroName.value=''">
+  add
+</button>

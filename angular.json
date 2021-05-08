@@ -118,9 +118,7 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "/angular-animations-code/"
-          }
+          "options": {}
         }
       }
     }
