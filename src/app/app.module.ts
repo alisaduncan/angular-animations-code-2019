@@ -18,6 +18,7 @@ import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroAddComponent } from './hero-add/hero-add.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { HeroAddComponent } from './hero-add/hero-add.component';
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    HeroAddComponent
+    HeroAddComponent,
+    HeroComponent
   ],
   bootstrap: [ AppComponent ]
 })
